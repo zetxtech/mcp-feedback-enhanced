@@ -85,7 +85,7 @@ To run the server in development mode with a web interface for testing:
 uv run fastmcp dev server.py
 ```
 
-This will open a web interface at http://localhost:5173 and allow you to interact with the MCP tools for testing.
+This will open a web interface and allow you to interact with the MCP tools for testing.
 
 ## Available tools
 
