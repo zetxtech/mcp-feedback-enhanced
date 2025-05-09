@@ -12,8 +12,8 @@ Simple [MCP Server](https://modelcontextprotocol.io/) to enable a human-in-the-l
 
 For the best results, add the following to your custom prompt in your AI assistant, you should add it on a rule or directly in the prompt (e.g., Cursor):
 
-> Whenever you want to ask a question, always call the MCP interactive_feedback.
-> Whenever you’re about to complete a user request, call the MCP interactive_feedback instead of simply ending the process.
+> Whenever you want to ask a question, always call the MCP `interactive_feedback`.  
+> Whenever you’re about to complete a user request, call the MCP `interactive_feedback` instead of simply ending the process.
 
 This will ensure your AI assistant uses this MCP server to request user feedback before marking the task as completed.
 
