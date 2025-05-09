@@ -5,8 +5,8 @@ Check out [dotcursorrules.com](https://dotcursorrules.com/) for more AI developm
 
 Simple [MCP Server](https://modelcontextprotocol.io/) to enable a human-in-the-loop workflow in AI-assisted development tools like [Cursor](https://www.cursor.com). This server allows you to run commands, view their output, and provide textual feedback directly to the AI. It is also compatible with [Cline](https://cline.bot) and [Windsurf](https://windsurf.com).
 
-![Interactive Feedback UI - Main View](images/interactive_feedback_1.jpg)
-![Interactive Feedback UI - Command Section Open](images/interactive_feedback_2.jpg)
+![Interactive Feedback UI - Main View](https://github.com/noopstudios/interactive-feedback-mcp/blob/main/.github/interactive_feedback_1.jpg?raw=true)
+![Interactive Feedback UI - Command Section Open](https://github.com/noopstudios/interactive-feedback-mcp/blob/main/.github/interactive_feedback_2.jpg)
 
 ## Prompt Engineering
 
@@ -29,6 +29,8 @@ These settings are typically stored in platform-specific locations (e.g., regist
 The "Save Configuration" button in the UI primarily saves the current command typed into the command input field and the state of the "Execute automatically on next run" checkbox for the active project. The visibility of the command section is saved automatically when you toggle it. General window size and position are saved when the application closes.
 
 ## Installation (Cursor)
+
+![Instalation on Cursor](https://github.com/noopstudios/interactive-feedback-mcp/blob/main/.github/cursor-example.jpg?raw=true)
 
 1.  **Prerequisites:**
     *   Python 3.11 or newer.
