@@ -14,8 +14,12 @@ For the best results, add the following to your custom prompt in your AI assista
 
 > Whenever you want to ask a question, always call the MCP `interactive_feedback`.  
 > Whenever you’re about to complete a user request, call the MCP `interactive_feedback` instead of simply ending the process.
+> If the feedback is empty you can end the request and don't call the mcp in loop.
 
 This will ensure your AI assistant uses this MCP server to request user feedback before marking the task as completed.
+
+## 💡 Why Use This?
+By guiding the assistant to check in with the user instead of branching out into speculative, high-cost tool calls, this module can drastically reduce the number of premium requests (e.g., OpenAI tool invocations) on platforms like Cursor. In some cases, it helps consolidate what would be up to 25 tool calls into a single, feedback-aware request — saving resources and improving performance.
 
 ## Configuration
 
