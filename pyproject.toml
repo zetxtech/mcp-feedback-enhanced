@@ -1,11 +1,11 @@
 [project]
-name = "mcp-feedback-enhanced"
+name = "mcp-feedback-enhanced-x"
 version = "2.6.0"
 description = "Enhanced MCP server for interactive user feedback and command execution in AI-assisted development, featuring dual interface support (Web UI and Desktop Application) with intelligent environment detection and cross-platform compatibility."
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [
-    { name = "Minidoracat", email = "minidora0702@gmail.com" }
+    { name = "Zetx Tech", email = "jackzzs@outlook.com" }
 ]
 keywords = ["mcp", "ai", "feedback", "web-ui", "desktop-app", "interactive", "development", "cross-platform", "tauri", "dual-interface"]
 classifiers = [
