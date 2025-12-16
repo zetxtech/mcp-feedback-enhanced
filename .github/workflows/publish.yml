@@ -46,6 +46,9 @@ on:
         description: '桌面應用構建的 Run ID'
         required: false
         type: string
+    secrets:
+      PYPI_API_TOKEN:
+        required: true
 
 jobs:
   release:
@@ -492,6 +495,9 @@ jobs:
 
     - name: Publish to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        user: __token__
+        password: ${{ secrets.PYPI_API_TOKEN }}
 
     - name: Push changes and tags
       run: |
