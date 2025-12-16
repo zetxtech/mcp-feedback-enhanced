@@ -87,6 +87,12 @@ jobs:
       if: steps.check_platform.outputs.should_build == 'true'
       uses: actions/checkout@v4
 
+    - name: Set up Python (ensure PyO3-compatible version)
+      if: steps.check_platform.outputs.should_build == 'true'
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.13'
+
     - name: Install Rust
       if: steps.check_platform.outputs.should_build == 'true'
       uses: dtolnay/rust-toolchain@stable
