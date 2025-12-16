@@ -501,6 +501,7 @@ jobs:
 
     - name: Push changes and tags
       run: |
+        git pull --rebase origin main
         git push origin main
         git push origin "v${{ steps.bump_version.outputs.new }}"
 
