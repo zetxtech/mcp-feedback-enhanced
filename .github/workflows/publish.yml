@@ -301,12 +301,20 @@ jobs:
         fi
 
         git add .
-        git commit -m "🔖 Release v${{ steps.bump_version.outputs.new }}
+        
+        if [ -n "$(git status --porcelain)" ]; then
+          git commit -m "🔖 Release v${{ steps.bump_version.outputs.new }}
 
-        - Updated version to ${{ steps.bump_version.outputs.new }}
-        - $VERSION_METHOD
-        - Auto-generated release from workflow"
-        git tag "v${{ steps.bump_version.outputs.new }}"
+          - Updated version to ${{ steps.bump_version.outputs.new }}
+          - $VERSION_METHOD
+          - Auto-generated release from workflow"
+          echo "✅ Changes committed."
+        else
+          echo "⚠️ No changes to commit (files might already match the new version)."
+        fi
+        
+        echo "🏷️ Tagging version v${{ steps.bump_version.outputs.new }}..."
+        git tag -f "v${{ steps.bump_version.outputs.new }}"
 
     - name: Check desktop build availability
       if: ${{ github.event.inputs.include_desktop == 'true' }}
